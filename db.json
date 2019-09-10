@@ -1,0 +1,64 @@
+{
+  "doughnutData": [
+    {
+      "title": "First donut",
+      "name": "Users",
+      "data": [
+        [
+          "typicode",
+          12
+        ],
+        [
+          "sec",
+          3
+        ]
+      ]
+    },
+    {
+      "title": "Second donut",
+      "name": "Users",
+      "data": [
+        [
+          "typicode",
+          12
+        ],
+        [
+          "sec",
+          3
+        ]
+      ]
+    },
+    {
+      "title": "Thirt donut",
+      "name": "Users",
+      "data": [
+        [
+          "typicode",
+          12
+        ],
+        [
+          "sec",
+          3
+        ],
+        [
+          "thir",
+          6
+        ]
+      ]
+    }
+  ],
+  "pieData": {
+    "title": "Users Awareness",
+    "name": "Users",
+    "data": [
+      [
+        "typicode",
+        12
+      ],
+      [
+        "sec",
+        3
+      ]
+    ]
+  }
+}
