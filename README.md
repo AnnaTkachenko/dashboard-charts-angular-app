@@ -1,5 +1,7 @@
 # Dashboard charts Angular App
-To run the project follow this steps: 
+This app has been implemented using Angular 8 and [Highcarts](https://www.highcharts.com/).
+
+To run the project follow the steps: 
 
 1. Clone the repo;
 2. Run `npm i`;
@@ -7,6 +9,13 @@ To run the project follow this steps:
 4. Run the project with `npm start`;
 
 Enjoy!
+
+
+## TODO: 
+1. Spinner on data loading;
+2. Implement charts widgets in more general and reusable way;
+3. Unit tests;
+
 
 ## Development server
 

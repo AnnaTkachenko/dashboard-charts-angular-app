@@ -4,27 +4,23 @@ import { ChartModule } from 'angular-highcharts';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { CoreModule } from './core/core.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { UsersComponent } from './users/users.component';
-import { ReportsComponent } from './reports/reports.component';
-import { SettingsComponent } from './settings/settings.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { UsersComponent } from './pages/users/users.component';
+import { ReportsComponent } from './pages/reports/reports.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 import { WidgetsModule } from './widgets/widgets.module';
-import { CampaignsComponent } from './campaigns/campaigns.component';
+import { CampaignsComponent } from './pages/campaigns/campaigns.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    DashboardComponent,
-    NotFoundComponent,
-    UsersComponent,
-    ReportsComponent,
-    SettingsComponent,
-    CampaignsComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +28,8 @@ import { CampaignsComponent } from './campaigns/campaigns.component';
     ChartModule,
     CoreModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

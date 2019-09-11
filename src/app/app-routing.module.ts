@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { ReportsComponent } from './reports/reports.component';
-import { UsersComponent } from './users/users.component';
-import { SettingsComponent } from './settings/settings.component';
-import { CampaignsComponent } from './campaigns/campaigns.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ReportsComponent } from './pages/reports/reports.component';
+import { UsersComponent } from './pages/users/users.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { CampaignsComponent } from './pages/campaigns/campaigns.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
