@@ -1,5 +1,15 @@
-import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { HighchartsService } from 'src/app/core/highcharts.service';
+import { Component, AfterViewInit, ElementRef, ViewChild, Input } from '@angular/core';
+import { HighchartsService } from 'src/app/core/services/highcharts.service';
+
+export interface ILineChart {
+  title: string;
+  titleYAxis: string;
+  titleXAxis: string;
+  series: Array<{
+    name: string;
+    data: Array<[number, number]>;
+  }>;
+}
 
 @Component({
   selector: 'app-line-chart',
@@ -7,6 +17,8 @@ import { HighchartsService } from 'src/app/core/highcharts.service';
   styleUrls: ['./line-chart.component.scss']
 })
 export class LineChartComponent implements AfterViewInit {
+  @Input() chartValues: ILineChart;
+
   @ViewChild('charts', { static: false }) public chartEl: ElementRef;
 
   private myOptions = {};
@@ -19,18 +31,21 @@ export class LineChartComponent implements AfterViewInit {
     this.myOptions = {
       chart: {
         type: 'line',
-        width: 800
+        width: 800,
+        zoomType: 'xy'
       },
       title: {
-        text: 'Past performance',
-        align: 'left'
+        text: this.chartValues.title,
       },
       xAxis: {
-        type: 'datetime'
+        type: 'datetime',
+        title: {
+          text: this.chartValues.titleXAxis
+        }
       },
       yAxis: {
         title: {
-          text: 'N of Users'
+          text: this.chartValues.titleYAxis
         }
       },
       responsive: {
@@ -54,30 +69,10 @@ export class LineChartComponent implements AfterViewInit {
           enableMouseTracking: true
         }
       },
-      series: [{
-        name: 'Test Performed',
-        data: [
-          [1565794000000, 9],
-          [1566094000000, 3],
-          [1566394000000, 10],
-          [1566594000000, 30],
-          [1566680400000, 45],
-          [1567285200000, 20],
-          [1568062800000, 19]
-        ]
+      credits: {
+        enabled: false
       },
-      {
-        name: 'Test Faild',
-        data: [
-          [1565794000000, 21.5],
-          [1566094000000, 25.2],
-          [1566394000000, 26.5],
-          [1566594000000, 23.3],
-          [1566680400000, 18.3],
-          [1567285200000, 13.9],
-          [1568062800000, 9.6]
-        ]
-      }]
+      series: this.chartValues.series
     };
     this.highchartsService.createChart(this.chartEl.nativeElement, this.myOptions);
   }

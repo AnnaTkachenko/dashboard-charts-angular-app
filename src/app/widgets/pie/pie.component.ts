@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, Input } from '@angular/core';
-import { HighchartsService } from 'src/app/core/highcharts.service';
+import { Component, ViewChild, AfterViewInit, ElementRef, Input } from '@angular/core';
+import { HighchartsService } from 'src/app/core/services/highcharts.service';
 
 export interface IPieData {
   title: string;
@@ -42,8 +42,7 @@ export class PieComponent implements AfterViewInit {
         enabled: false
       },
       title: {
-        text: this.chartValues.title,
-        align: 'left'
+        text: this.chartValues.title
       },
       tooltip: {
         formatter() {

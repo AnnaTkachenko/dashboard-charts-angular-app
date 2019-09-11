@@ -5,23 +5,26 @@
                 <app-doughnut [chartValues]="data"></app-doughnut>
             </ng-container>
         </div>
-        <div class="line-box">
-            <app-line-chart></app-line-chart>
+
+        <div class="line-box box" *ngIf="lineChartData">
+            <app-line-chart [chartValues]="lineChartData"></app-line-chart>
         </div>
-        <div class="line-box">
-            <app-bubble-chart></app-bubble-chart>
+
+        <div class="bubble-box box" *ngIf="bubbleChartData">
+            <app-bubble-chart [chartValues]="bubbleChartData"></app-bubble-chart>
         </div>
     </div>
     <div class="col-3">
-
-        <div class="prevented-loss">
-            <p>Header</p>
-            <div class="body">
-                <h2>444, 444 $</h2>
-            </div>
+        <div class="prevented-loss-box box">
+            <app-prevented-loss></app-prevented-loss>
         </div>
-        <div *ngIf="pieData" class="pie-box">
+
+        <div *ngIf="pieData" class="pie-box box">
             <app-pie [chartValues]="pieData"></app-pie>
+        </div>
+
+        <div class="leader-board-box box">
+            <app-leaderboard></app-leaderboard>
         </div>
     </div>
 </div>

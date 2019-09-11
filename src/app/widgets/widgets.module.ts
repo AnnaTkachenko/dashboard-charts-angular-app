@@ -4,13 +4,17 @@ import { DoughnutComponent } from './doughnut/doughnut.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { PieComponent } from './pie/pie.component';
 import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { PreventedLossComponent } from './prevented-loss/prevented-loss.component';
 
 @NgModule({
   declarations: [
     DoughnutComponent,
     LineChartComponent,
     PieComponent,
-    BubbleChartComponent
+    BubbleChartComponent,
+    LeaderboardComponent,
+    PreventedLossComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +23,9 @@ import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
     DoughnutComponent,
     LineChartComponent,
     PieComponent,
-    BubbleChartComponent
+    BubbleChartComponent,
+    LeaderboardComponent,
+    PreventedLossComponent
   ]
 })
-export class SharedModule { }
+export class WidgetsModule { }

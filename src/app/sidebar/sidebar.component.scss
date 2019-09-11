@@ -8,8 +8,15 @@
   background-color: #495055;
   color: white;
   overflow-x: hidden;
-  .sidebar-body {
+  .sidebar-body a{
+    display: flex;
     padding: 10px 20px;
+    text-decoration: none;
+    transform: all .2s ease-in-out;
+    color: white;
+    &:hover, &.is-active {
+      background-color: #446b86;
+    }
   }
 }
 
@@ -17,4 +24,6 @@
   padding: 15px 20px;
   padding-bottom: 10px;
   background-color: #2386c9;
+  cursor: pointer;
 }
+

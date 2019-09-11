@@ -1,0 +1,15 @@
+<div *ngIf="users">
+    <div class="leaderboard-header">
+        <span>Leaderboard</span>
+        <div class="btn-group" role="group" (click)="onButtonGroupClick($event)" aria-label="leaderboard sorting">
+            <button type="button" id="showTop" [class.active]="descSort" class="btn">Top</button>
+            <button type="button" id="showBottom" [class.active]="!descSort" class="btn">Bottom</button>
+        </div>
+    </div>
+    <ul>
+        <li *ngFor="let user of users">
+            <i class="person"></i>
+            {{user.name}}
+        </li>
+    </ul>
+</div>

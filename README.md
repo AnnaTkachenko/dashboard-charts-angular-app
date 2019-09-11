@@ -1,6 +1,12 @@
 # Dashboard charts Angular App
+To run the project follow this steps: 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
+1. Clone the repo;
+2. Run `npm i`;
+3. Let’s start JSON server by executing the following command: `json-server --watch db.json`;
+4. Run the project with `npm start`;
+
+Enjoy!
 
 ## Development server
 

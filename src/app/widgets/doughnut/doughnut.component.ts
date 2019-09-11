@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input } from '@angular/core';
-import { HighchartsService } from 'src/app/core/highcharts.service';
+import { Component, ViewChild, ElementRef, AfterViewInit, Input } from '@angular/core';
+import { HighchartsService } from 'src/app/core/services/highcharts.service';
 import { IPieData } from '../pie/pie.component';
 
 @Component({

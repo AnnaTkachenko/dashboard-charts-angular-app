@@ -1,12 +1,12 @@
 <nav id="sidebar">
-    <div class="sidebar-header">
+    <div routerLink="/dashboard" class="sidebar-header">
         <h5>Cywareness</h5>
     </div>
 
     <div class="sidebar-body">
-        <p>Campaigns</p>
-        <p>Users</p>
-        <p>Reports</p>
-        <p>Settings</p>
+        <a routerLink="/campaigns" routerLinkActive="is-active">Campaigns</a>
+        <a routerLink="/users" routerLinkActive="is-active">Users</a>
+        <a routerLink="/reports" routerLinkActive="is-active">Reports</a>
+        <a routerLink="/settings" routerLinkActive="is-active">Settings</a>
     </div>
 </nav>
